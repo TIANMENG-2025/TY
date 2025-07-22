@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 身份验证功能
-    const allowedNames = ['梁庆梓', '高俊轩', '张志成']; // 允许访问的名字列表
+    const allowedNames = ['梁庆梓', '高俊轩', '张志成','胡纪楠', '郑鑫德', '黎嘉宝', '伍俊琪']; // 允许访问的名字列表
     const authButton = document.getElementById('authButton');
     
     authButton.addEventListener('click', () => {
