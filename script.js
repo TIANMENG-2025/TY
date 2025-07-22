@@ -52,4 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
             interactiveButton.focus();
         }
     });
+
+    // 身份验证功能
+    const allowedNames = ['梁庆梓', '高俊轩', '张志成']; // 允许访问的名字列表
+    const authButton = document.getElementById('authButton');
+    
+    authButton.addEventListener('click', () => {
+        const name = prompt('请输入你的真实姓名进行身份验证:');
+        if (allowedNames.includes(name)) {
+            window.location.href = 'newpage.html';
+        } else {
+            alert('抱歉，您的名字不在允许访问的列表中。');
+        }
+    });
 });

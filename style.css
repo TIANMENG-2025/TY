@@ -44,6 +44,23 @@ p {
     font-size: 1.1rem;
 }
 
+#authButton {
+    display: block;
+    margin: 2rem auto;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#authButton:hover {
+    background-color: #2980b9;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
