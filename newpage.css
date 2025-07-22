@@ -1,0 +1,16 @@
+#genshinButton {
+    display: block;
+    margin: 2rem auto;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#genshinButton:hover {
+    background-color: #2980b9;
+}
