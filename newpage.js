@@ -1,5 +1,10 @@
 // 页面加载完成后执行
  document.addEventListener('DOMContentLoaded', () => {
+     // 获取URL参数中的用户名
+     const urlParams = new URLSearchParams(window.location.search);
+     const userName = urlParams.get('name');
+     const isSpecialUser = userName === '张志成';
+     
      // 获取按钮元素
      const genshinButton = document.getElementById('genshinButton');
      
@@ -27,5 +32,41 @@
                 window.location.href = downloadUrl;
             }, 1000);
         });
+     }
+ 
+     // 新世界功能：性别选择模态框逻辑
+     const newWorldButton = document.getElementById('newWorldButton');
+     const genderModal = document.getElementById('genderModal');
+     const confirmGender = document.getElementById('confirmGender');
+     const maleRadio = document.querySelector('input[value="male"]');
+     const femaleRadio = document.querySelector('input[value="female"]');
+     
+     // 对特定用户隐藏女性选项
+     if (isSpecialUser && femaleRadio) {
+         const femaleLabel = femaleRadio.closest('label');
+         if (femaleLabel) femaleLabel.style.display = 'none';
+         femaleRadio.disabled = true;
+     }
+     
+     // 打开性别选择模态框
+     if (newWorldButton && genderModal) {
+         newWorldButton.addEventListener('click', () => {
+             genderModal.style.display = 'flex';
+         });
+     }
+     
+     // 处理性别选择确认
+     if (confirmGender) {
+         confirmGender.addEventListener('click', () => {
+             if (maleRadio.checked) {
+                 alert('终于承认了，我就知道你是gay！');
+             } else if (femaleRadio.checked) {
+                 const userName = prompt('不会有人知道的，告诉我她的名字：');
+                 if (userName) {
+                     alert(`${userName}吗？有点意思`);
+                 }
+             }
+             genderModal.style.display = 'none';
+         });
      }
  });

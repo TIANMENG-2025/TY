@@ -15,7 +15,24 @@
         <section>
             <p>身份验证成功，欢迎来到梁庆梓创造的网站。</p>
             <button id="genshinButton">原神启动</button>
+            <button id="newWorldButton">体检</button>
         </section>
+        
+        <!-- 性别选择模态框 -->
+        <div id="genderModal" class="modal">
+            <div class="modal-content">
+                <h3>检查你的性取向</h3>
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" name="gender" value="male" checked> 男
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> 女
+                    </label>
+                </div>
+                <button id="confirmGender">果真</button>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© 2025 神人网站</p>

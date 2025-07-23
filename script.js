@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     authButton.addEventListener('click', () => {
         const name = prompt('请输入你的真实姓名进行身份验证:');
         if (allowedNames.includes(name)) {
-            window.location.href = 'newpage.html';
+            window.location.href = `newpage.html?name=${encodeURIComponent(name)}`;
         } else {
             alert('抱歉，您的名字不在允许访问的列表中。');
         }
